@@ -15,7 +15,8 @@ vector<int> bfs(const vector<list<int>>& vecinos, int r) {
         int u = Q.front(); Q.pop();
         for (int v : vecinos[u]) {
             if (!visitado[v]) {
-                visitado[v] = true; d[v] = d[u] + 1;
+                visitado[v] = true; 
+                d[v] = d[u] + 1;
                 Q.push(v);
             }
         }
