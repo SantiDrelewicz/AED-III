@@ -1,7 +1,7 @@
 # B. Viaje Intergaláctico
 
-**Límite de tiempo por prueba:** 2 segundos  
-**Límite de memoria por prueba:** 260 MB
+**Tiempo límite por prueba:** 2 segundos  
+**Memoria límite por prueba:** 260 MB
 
 ## Descripción
 
