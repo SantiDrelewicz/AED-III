@@ -35,7 +35,10 @@ int main() {
 			if (u < m && u > 0) {
 				N_out[u].push_back(u - 1);
 				N_out[u].push_back(2 * u);
-			} else if (u > m) N_out[u].push_back(u - 1);
+			} else if (u > m)  {
+				N_out[u].push_back(u - 1);
+			}
+				
 		}
 		auto dist = bfs(N_out, n);
 		res = dist[m];
