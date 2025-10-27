@@ -3,8 +3,6 @@
 **Tiempo límite por prueba:** 2 segundos  
 **Memoria límite por prueba:** 260 MB
 
-## Descripción
-
 El malvado comandante Zargon capturó al equipo del capitán Martínez. El capitán Martínez logró escapar, pero para ese momento la nave de Zargon ya había saltado al hiperespacio. Sin embargo, Martínez sabe en qué planeta aterrizará Zargon. Para salvar a sus amigos, Martínez debe viajar repetidamente a través de portales para llegar a ese planeta. En total, la galaxia tiene $n$ planetas, indexados con números del $1$ al $n$. Martínez está en el planeta con índice $1$, y Zargon aterrizará en el planeta con índice $n$. Martínez puede moverse entre algunos pares de planetas a través de portales (puede moverse en ambas direcciones); la transferencia toma una cantidad positiva de segundos. Martínez comienza su viaje en el tiempo $0$.
 
 Puede suceder que otros viajeros estén llegando al planeta donde Martínez se encuentra. En este caso, Martínez tiene que esperar exactamente 1 segundo antes de poder usar el portal. Es decir, si en el tiempo $t$ otro viajero llega al planeta, Martínez solo puede atravesar el portal en el tiempo $t + 1$, a menos que haya más viajeros llegando en el tiempo $t + 1$ al mismo planeta. Conociendo la información sobre los tiempos de viaje entre los planetas, y los tiempos en los que Martínez no podría usar el portal en planetas particulares, determine el tiempo mínimo en el cual puede llegar al planeta con índice $n$.
