@@ -1,6 +1,6 @@
 # B. Viaje Intergaláctico
 
-**Tiempo límite por test:** 2 segundos  
+**Tiempo límite por test:** 2 s.  
 **Memoria límite por test:** 260 MB
 
 El malvado comandante Zargon capturó al equipo del capitán Martínez. El capitán Martínez logró escapar, pero para ese momento la nave de Zargon ya había saltado al hiperespacio. Sin embargo, Martínez sabe en qué planeta aterrizará Zargon. Para salvar a sus amigos, Martínez debe viajar repetidamente a través de portales para llegar a ese planeta. En total, la galaxia tiene $n$ planetas, indexados con números del $1$ al $n$. Martínez está en el planeta con índice $1$, y Zargon aterrizará en el planeta con índice $n$. Martínez puede moverse entre algunos pares de planetas a través de portales (puede moverse en ambas direcciones); la transferencia toma una cantidad positiva de segundos. Martínez comienza su viaje en el tiempo $0$.
