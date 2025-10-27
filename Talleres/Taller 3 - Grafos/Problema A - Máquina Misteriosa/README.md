@@ -1,7 +1,7 @@
 # A. Máquina misteriosa
 
-**Tiempo limite por test:** 2 s  
-**Memoria limite por test:** 256 MB
+**Tiempo límite por test:** 2 s  
+**Memoria límite por test:** 256 MB
 
 Carlos ha encontrado un dispositivo extraño. En el panel frontal del dispositivo hay: un botón rojo, un botón azul y una pantalla que muestra un número entero positivo. Después de presionar el botón rojo, el dispositivo multiplica el número mostrado por dos. Después de presionar el botón azul, el dispositivo resta uno al número en la pantalla. Si en algún momento el número deja de ser positivo, el dispositivo se descompone. La pantalla puede mostrar números arbitrariamente grandes. Inicialmente, la pantalla muestra el número $n$.
 
