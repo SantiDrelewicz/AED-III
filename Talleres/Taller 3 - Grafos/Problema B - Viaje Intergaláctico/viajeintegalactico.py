@@ -1,18 +1,19 @@
-import heapq
+import heapq as ColaPrioridad
+from heapq import heappop as extraer_min, heappush as insertar
 
 INF = float('inf')
 
 def dijkstra(vecinos, s):
     dist = [INF] * len(vecinos)
     dist[s] = 0
-    heap = [(0, s)]
-    while len(heap) > 0: 
-        dist_actual, u = heapq.heappop(heap)
+    cp: ColaPrioridad = [(0, s)]
+    while len(cp) > 0: 
+        dist_actual, u = extraer_min(cp)
         if not dist_actual > dist[u]:
             for v, p in vecinos[u]:
                 if dist[v] > dist_actual + p:
                     dist[v] = dist_actual + p
-                    heapq.heappush(heap, (dist[v], v))
+                    insertar(cp, (dist[v], v))
     return dist
 
 def main():
