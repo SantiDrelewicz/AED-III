@@ -23,12 +23,12 @@ Imprima un solo número: la menor cantidad de tiempo que Martínez necesita para
 
 | entrada |
 |---------|
-| `4 6`<br>`1 2 2`<br>`1 3 3`<br>`1 4 8`<br>`2 3 1`<br>`2 4 5`<br>`3 4 1`<br>`1`<br>`0`<br>`2`<br>`3 4`<br>`0` | 
-| salida |
+| `4 6`<br>`1 2 2`<br>`1 3 3`<br>`1 4 9`<br>`2 3 5`<br>`2 4 6`<br>`3 4 3`<br>`0`<br>`1 3`<br>`2 3 4` <br>`0` | 
+| **salida** |
 | `8` |
 
 | entrada |
 |---------|
-| `3 1`<br>`1 2 3`<br>`1`<br>`1`<br>`0`<br>`0` | 
-| salida |
+| `3 1`<br>`1 2 3`<br>`0`<br>`1 3`<br>`0`| 
+| **salida** |
 | `-1` |
