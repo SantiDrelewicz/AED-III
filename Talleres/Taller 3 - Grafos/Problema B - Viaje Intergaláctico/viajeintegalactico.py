@@ -1,50 +1,58 @@
 from heapq import heappop as extraer_min, heappush as insertar
 from collections import deque
-from bisect import bisect_left
 
 INF = float('inf')
 
-def prox_t_disp(t, busy):
-    # busy es una lista ordenada de tiempos ocupados
-    i = bisect_left(busy, t)
-    while i < len(busy) and busy[i] == t:
+def prox_t_disp(t, tiempos_llegada):
+    # buesco donde se encuentra el tiempo igual o mas cercano a t
+    i = 0
+    while i < len(tiempos_llegada) and tiempos_llegada[i] < t:
+        i += 1
+    # Busco el siguiente tiempo disponible
+    while i < len(tiempos_llegada) and tiempos_llegada[i] == t:
         t += 1
         i += 1
     return t
 
-
-def dijkstra_paciente(conexiones, s, f):
+def dijkstra_paciente(conexiones, T, s=0, f=-1):
     n = len(conexiones)
-    dist = [INF] * n
-    dist[s] = 0
+    t_min = [INF] * n
+    t_min[s] = 0
     cp = [(0, s)]
     while len(cp) > 0:
         t, a = extraer_min(cp)
-        if t > dist[a]:
+        if t > t_min[a]:
             continue
-        elif a == f:
+        elif a == f % n:
             return t
-        t = prox_t_disp(t, T[a])
+        t_partida = prox_t_disp(t, T[a])
         for b, w in conexiones[a]:
-            prox_t = t + w
-            if dist[b] > prox_t:
-                dist[b] = prox_t
-                insertar(cp, (prox_t, b))
-    return dist
+            tiempo_hasta_b = t_partida + w
+            if t_min[b] > tiempo_hasta_b:
+                t_min[b] = tiempo_hasta_b
+                insertar(cp, (tiempo_hasta_b, b))
+    return t_min[f]
 
 def main():
     n, m = map(int, input().split())
     conexiones = [deque() for _ in range(n)]
     for _ in range(m):
         a, b, w = map(int, input().split())
-        conexiones[a].append((b, w))
-        conexiones[b].append((a, w))
+        conexiones[a-1].append((b-1, w))
     T = []
     for i in range(n):
-        ki = list(int(t_ij) for t_ij in input().split())
-        T.append(ki)
-    distancias = dijkstra_paciente(conexiones, 0)
-
+        tiempos = list(map(int, input().split()))
+        if len(tiempos) > 1:
+            ki, ti = tiempos[0], tiempos[1:]
+            tiempos_llegada = [ti[j] for j in range(ki)]
+            T.append(tiempos_llegada)
+        else:
+            T.append([])
+    t_min = dijkstra_paciente(conexiones, T)
+    if t_min < INF:
+        print(t_min)
+    else:
+        print(-1)
 
 if __name__ == "__main__":
     main()
