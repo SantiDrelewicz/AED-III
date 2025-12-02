@@ -1,9 +1,9 @@
 # Demostración de propiedades simples sobre grafos
+
 ## Equilibrio Digrafo
 1. ⋆ Demostrar, usando inducción en la cantidad de aristas, que todo digrafo D satisface 
-$$
-  \sum_{v ∈ V(D)} d_{in}(v) = \sum_{v ∈ V(D)} d_{out}(v) = |E(D)|
-$$
+$$\sum_{v ∈ V(D)} d_{in}(v) = \sum_{v ∈ V(D)} d_{out}(v) = |E(D)|$$
+
 >- **Caso base:** Tomo $m = |E(D)| = 0$ y por lo tanto tenemos a todos los vertices desconectados, de forma que
 >
   >$$ \sum_{v ∈ V(D)} d_{in}(v) = 0 = \sum_{v ∈ V(D)} d_{out}(v) $$
