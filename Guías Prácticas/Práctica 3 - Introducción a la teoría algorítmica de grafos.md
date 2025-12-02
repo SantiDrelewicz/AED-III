@@ -2,6 +2,7 @@
 
 ## Equilibrio Digrafo
 1. ⋆ Demostrar, usando inducción en la cantidad de aristas, que todo digrafo D satisface 
+
 $$\sum_{v ∈ V(D)} d_{in}(v) = \sum_{v ∈ V(D)} d_{out}(v) = |E(D)|$$
 
 >- **Caso base:** Tomo $m = |E(D)| = 0$ y por lo tanto tenemos a todos los vertices desconectados, de forma que
@@ -28,5 +29,5 @@ $$\sum_{v ∈ V(D)} d_{in}(v) = \sum_{v ∈ V(D)} d_{out}(v) = |E(D)|$$
       & =  \sum_{v ∈ V(D')} d_{out}(v) + 1 = m-1 + 1 = m
 \end{align*}$$
 >
->$ ⟹ \sum_{v ∈ V(D)} d_{in}(v) = \sum_{v ∈ V(D)} d_{out}(v) = m_{ \; \blacksquare}$
+> - $ ⟹ \sum_{v ∈ V(D)} d_{in}(v) = \sum_{v ∈ V(D)} d_{out}(v) = m_{ \; \blacksquare}$
 
