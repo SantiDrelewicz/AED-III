@@ -13,8 +13,8 @@ def prox_t_disp(t, tiempos_llegada):
         t += 1
         i += 1
     return t
-
-def dijkstra_paciente(conexiones, T, s=0, f=-1):
+    
+def dijkstra_intergalactico(conexiones: int, T, s=0, f=-1):
     n = len(conexiones)
     t_min = [INF] * n
     t_min[s] = 0
