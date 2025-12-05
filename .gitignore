@@ -1,4 +1,5 @@
 .vscode/
+.venv/
 *.exe
 *.pyc
 __pycache__/
